@@ -9,8 +9,6 @@ def input_error(func):
             return "KeyError: The key you provided does not exist."
         except ValueError:
             return "ValueError: The value you provided is not valid."
-        except IndexError:
-            return "IndexError: The index you provided is out of range."
     return inner
 
 
