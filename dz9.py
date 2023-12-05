@@ -29,19 +29,13 @@ def add(contact_info):
 @input_error
 def change(contact_info):
     name, phone = contact_info.split()
-    if name in contacts:
-        contacts[name] = phone
-        return f"Phone number for {name} changed."
-    else:
-        return f"No contact named {name} found."
+    contacts[name] = phone
+    return f"Phone number for {name} changed."
 
 
 @input_error
 def phone(name):
-    if name in contacts:
-        return contacts[name]
-    else:
-        return f"No contact named {name} found."
+    return contacts[name]
 
 
 @input_error
